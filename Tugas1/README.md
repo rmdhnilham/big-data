@@ -15,7 +15,7 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
  
  3. Membuat cluster perilaku pelanggan pada mall yang bersangkutan berdasarkan Spending Score dan Annual Income
  
- ![](Dokumentasi/cluster.png)
+ ![](Dokumentasi/cluster-1.png)
 # Data Understanding
 - Dataset disini memuat data pelanggan dari sebuah mall yang berisikan Jenis Kelamin, Usia, Gaji per Tahun, serta Spending Score yang diberikan oleh mall yang bersangkutan berdasarkan perilaku dan jumlah belanjaan dari pelanggan. Format file dari dataset adalah Comma Separated Values (.csv).
 - Data yang dimuat berjumlah 200 pelanggan dengan 5 atribut/kolom sebagai berikut:
