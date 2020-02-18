@@ -17,34 +17,46 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
     - Annual Income : Gaji dalam satuan ribu dollar per tahun dari pelanggan.
     - Spending Score (1-100) : Skor yang diberikan mall untuk pelanggan berdasarkan perilaku dan jumlah belanjaan.
 # Data Preparation
+
 ![](Dokumentasi/split.png)
 - Pertama, dataset yang tersedia di-read menggunakan CSV Reader.
 - Selanjutnya dihubungkan ke column splitter dan atur untuk column apa yang dipisah.
+
 ![](Dokumentasi/split-dataset.png)
 - Setelah mengeksekusi CSV Writer akan muncul file CSV yang merupakan hasil dari split yang telah dilakukan.
+
 ![](Dokumentasi/write-csv.png)
 - Simpan salah satu file yang telah di split ke dalam database menggunakan DB Table Selector dan isi nama table yang akan dibuat, yaitu table customers.
+
 ![](Dokumentasi/save-tables.png)
 - note: untuk seluruh node setelah ini yang berhubungan dengan database harus terhubung ke MySQL Connector yang sudah terlogin pada phpmyadmin
 - Hasil data pada table customers:
+
 ![](Dokumentasi/save-databases.png)
 # Modelling
+
 ![](Dokumentasi/modelling.png)
 ### Membaca dataset dari CSV file
 - Menggunakan CSV Reader pada KNIME dan buka data yang telah di-split selain yang disimpan pada database.
+
 ![](Dokumentasi/read-csv.png)
 ### Membaca dataset dari Database
 - Hubungkan data yang telah disimpan pada database ke DB Reader.
+
 ![](Dokumentasi/read-DB.png)
 ### Append kedua dataset
 - Dengan menghubungkan CSV Reader dan DB Reader ke Column Appender dan kedua dataset siap di append dengan Execute Column Appender.
+
 ![](Dokumentasi/append.png)
 # Evaluation
 - Untuk evaluasi sebenarnya sudah bisa dilihat dari lamu hijau yang menyala pada node Column Appender namun untuk membuktikan data yang di-append adalah sama dengan initial dataset maka saya menggunakan [online checker](https://extendsclass.com/csv-diff.html) untuk mengetesnya, dan berikut [hasilnya](https://github.com/rmdhnilham/big-data/blob/master/Tugas1/Evaluation_Check.csv)
 # Deployment
 - Dari hasil Column Append, gunakan node CSV Writer dan DB Writer untuk men-deploy ke CSV ataupun Batabase
+
 ![](Dokumentasi/deploy.png)
 ### Hasil Deploy CSV
+
 ![](Dokumentasi/save-dataset-CSV.png)
 ### Hasil Deploy Database
+
 ![](Dokumentasi/save-dataset-DB.png)
