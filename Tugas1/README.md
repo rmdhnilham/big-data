@@ -19,13 +19,13 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
 # Data Preparation
 ![](Dokumentasi/split.png)
 - Pertama, dataset yang tersedia di-read menggunakan CSV Reader.
-![](Dokumentasi/split-dataset.png)
 - Selanjutnya dihubungkan ke column splitter dan atur untuk column apa yang dipisah.
-![](Dokumentasi/write-csv.png)
+![](Dokumentasi/split-dataset.png)
 - Setelah mengeksekusi CSV Writer akan muncul file CSV yang merupakan hasil dari split yang telah dilakukan.
-![](Dokumentasi/save-tables.png)
+![](Dokumentasi/write-csv.png)
 - Simpan salah satu file yang telah di split ke dalam database menggunakan DB Table Selector dan isi nama table yang akan dibuat, yaitu table customers.
-- untuk seluruh node setelah ini yang berhubungan dengan database harus terhubung ke MySQL Connector yang sudah terlogin pada phpmyadmin
+![](Dokumentasi/save-tables.png)
+- note: untuk seluruh node setelah ini yang berhubungan dengan database harus terhubung ke MySQL Connector yang sudah terlogin pada phpmyadmin
 - Hasil data pada table customers:
 ![](Dokumentasi/save-databases.png)
 # Modelling
