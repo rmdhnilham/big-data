@@ -8,9 +8,11 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
  1. Mensegmentasi pelanggan dari mall yang bersangkutan
  
  ![](Dokumentasi/segmentasi.png)
+ 
  2. Analisis pelanggan dari mall yang bersangkutan
  
  ![](Dokumentasi/analisis.png)
+ 
  3. Membuat cluster perilaku pelanggan pada mall yang bersangkutan berdasarkan Spending Score dan Annual Income
  
  ![](Dokumentasi/cluster.png)
