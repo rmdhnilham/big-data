@@ -31,20 +31,19 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
 # Modelling
 ![](Dokumentasi/modelling.png)
 ### Membaca dataset dari CSV file
-![](Dokumentasi/read-csv.png)
 - Menggunakan CSV Reader pada KNIME dan buka data yang telah di-split selain yang disimpan pada database.
+![](Dokumentasi/read-csv.png)
 ### Membaca dataset dari Database
-![](Dokumentasi/read-DB.png)
 - Hubungkan data yang telah disimpan pada database ke DB Reader.
+![](Dokumentasi/read-DB.png)
 ### Append kedua dataset
-![](Dokumentasi/append.png)
 - Dengan menghubungkan CSV Reader dan DB Reader ke Column Appender dan kedua dataset siap di append dengan Execute Column Appender.
-# Evaluation
 ![](Dokumentasi/append.png)
+# Evaluation
 - Untuk evaluasi sebenarnya sudah bisa dilihat dari lamu hijau yang menyala pada node Column Appender namun untuk membuktikan data yang di-append adalah sama dengan initial dataset maka saya menggunakan [online checker](https://extendsclass.com/csv-diff.html) untuk mengetesnya, dan berikut [hasilnya](https://github.com/rmdhnilham/big-data/blob/master/Tugas1/Evaluation_Check.csv)
 # Deployment
-![](Dokumentasi/append.png)
 - Dari hasil Column Append, gunakan node CSV Writer dan DB Writer untuk men-deploy ke CSV ataupun Batabase
+![](Dokumentasi/deploy.png)
 ### Hasil Deploy CSV
 ![](Dokumentasi/save-dataset-CSV.png)
 ### Hasil Deploy Database
