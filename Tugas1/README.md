@@ -44,7 +44,7 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
 - Dengan menghubungkan CSV Reader dan DB Reader ke Column Appender dan kedua dataset siap di append dengan Execute Column Appender.
 # Evaluation
 ![](Dokumentasi/append.png)
-- Untuk evaluasi sebenarnya sudah bisa dilihat dari lamu hijau yang menyala pada node Column Appender namun untuk membuktikan data yang di-append adalah sama dengan initial data maka saya 
+- Untuk evaluasi sebenarnya sudah bisa dilihat dari lamu hijau yang menyala pada node Column Appender namun untuk membuktikan data yang di-append adalah sama dengan initial dataset maka saya menggunakan [online checker](https://extendsclass.com/csv-diff.html) untuk mengetesnya, dan berikut [hasilnya](https://github.com/rmdhnilham/big-data/blob/master/Tugas1/Evaluation_Check.csv)
 # Deployment
 ![](Dokumentasi/append.png)
 - Dari hasil Column Append, gunakan node CSV Writer dan DB Writer untuk men-deploy ke CSV ataupun Batabase
