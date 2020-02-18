@@ -24,21 +24,18 @@ Kemungkinan proses bisnis yang dapat dilakukan pada dataset ini antara lain :
 ![](Dokumentasi/write-csv.png)
 - Setelah mengeksekusi CSV Writer akan muncul file CSV yang merupakan hasil dari split yang telah dilakukan.
 ![](Dokumentasi/save-tables.png)
-- Simpan salah satu file yang telah di split ke dalam database menggunakan DB Table Selector dan isi nama table yang akan dibuat, yaitu table *customers.
-- *untuk seluruh node setelah ini yang berhubungan dengan database harus terhubung ke MySQL Connector yang sudah terlogin pada phpmyadmin
-<br>
-- Hasil data pada table *customers:
+- Simpan salah satu file yang telah di split ke dalam database menggunakan DB Table Selector dan isi nama table yang akan dibuat, yaitu table customers.
+- untuk seluruh node setelah ini yang berhubungan dengan database harus terhubung ke MySQL Connector yang sudah terlogin pada phpmyadmin
+- Hasil data pada table customers:
 ![](Dokumentasi/save-databases.png)
 # Modelling
 ![](Dokumentasi/modelling.png)
 ### Membaca dataset dari CSV file
 ![](Dokumentasi/read-csv.png)
 - Menggunakan CSV Reader pada KNIME dan buka data yang telah di-split selain yang disimpan pada database.
-<br>
 ### Membaca dataset dari Database
 ![](Dokumentasi/read-DB.png)
 - Hubungkan data yang telah disimpan pada database ke DB Reader.
-<br>
 ### Append kedua dataset
 ![](Dokumentasi/append.png)
 - Dengan menghubungkan CSV Reader dan DB Reader ke Column Appender dan kedua dataset siap di append dengan Execute Column Appender.
