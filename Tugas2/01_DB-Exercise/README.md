@@ -127,7 +127,7 @@ Semua tabel sudah terganti nama
 
 - Masukkan settingan seperti ini
 
-![](Dokumentasi/3-REMOVECOLUMN_SET.PNG)
+![](Dokumentasi/3-REMOVECOLUMN_SE.PNG)
 
 - Maka hasilnya akan seperti ini
 
