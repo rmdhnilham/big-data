@@ -141,9 +141,61 @@ Semua tabel sudah terganti nama
 
 ![](Dokumentasi/3-DTPREDICT_SET.PNG)
 
-- Maka hasilnya akan seperti ini 
+- Maka hasil tree akan seperti ini 
 
-![](Dokumentasi/3-DTPREDICT_RES.PNG)
+![](Dokumentasi/3-TREE.PNG)
 
 
 # WritingToDB
+
+- Simpan file awal sebelum di proses
+
+![](Dokumentasi/4-SAVEORI.PNG)
+
+- Setting seperti berikut
+
+![](Dokumentasi/4-SAVEORI_SET.PNG)
+
+- File awal berasil di back-up
+
+![](Dokumentasi/4-SAVEORI_RES.PNG)
+
+- Simpan model dengan timestamp menggunakan workflow seperti berikut
+
+![](Dokumentasi/4-CREATETIMESTAMP.PNG)
+
+- Settingan PMML To Cell
+
+![](Dokumentasi/4-CREATETIMESTAMP_SET-1.PNG)
+
+- Settingan Create Date&Time Range
+
+![](Dokumentasi/4-CREATETIMESTAMP_SET-2.PNG)
+
+- Settingan Strings to Binary Objects
+
+![](Dokumentasi/4-CREATETIMESTAMP_SET-3.PNG)
+
+- Settingan Joiner
+
+![](Dokumentasi/4-CREATETIMESTAMP_SET-4.PNG)
+
+- Hasil penyimpanan model dan timestamp
+
+![](Dokumentasi/4-CREATETIMESTAMP_RES-2.PNG)
+
+- Tambahkan DB Update untuk mengupdate database setelah proses
+
+![](Dokumentasi/4-DBUPDATE.PNG)
+
+- Setting seperti ini
+
+![](Dokumentasi/4-DBUPDATE_SET.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/4-DBUPDATE_RES.PNG)
+
+- Tambahkan node Filter Column untuk mengecek apakah sudah terupdate apa belum
+
+![](Dokumentasi/4-DBUPDATE_FILT.PNG)
