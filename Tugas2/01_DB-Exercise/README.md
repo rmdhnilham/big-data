@@ -56,7 +56,7 @@ Semua tabel sudah terganti nama
 
 - Maka hasilnya akan seperti ini
 
-![](Dokumentasi/2-INNERJOIN_SERIALNO_RES.PNG)
+![](Dokumentasi/2-INNERJOIN_SERIALNO_RESULT.PNG)
 
 - Menambahkan Row Filter
 
