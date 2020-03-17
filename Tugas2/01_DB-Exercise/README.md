@@ -10,7 +10,7 @@
 
 ![](Dokumentasi/rename_table-2.png)
 
-![](Dokumentasi/rename_table-4.png)
+![](Dokumentasi/rename_table-4.PNG)
 
 Semua tabel sudah terganti nama
 
