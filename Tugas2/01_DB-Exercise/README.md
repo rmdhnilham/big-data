@@ -24,7 +24,7 @@ Semua tabel sudah terganti nama
 
 - Kemudian execute node tersebut
 
-![](Dokumentasi/DB_Table_Selector.PNG)
+![](Dokumentasi/DB_Table_Selector-2.PNG)
 
 - Selanjutnya execute node DB Reader dan buka KNIME data table
 
