@@ -78,9 +78,9 @@ Semua tabel sudah terganti nama
 
 ![](Dokumentasi/2-ROWFILTER_COWNULL_SET.PNG)
 
-- Hasilnya kosong karena tidak ada data NULL pada tabel cow
+- Maka hasilnya akan seperti ini
 
-![](Dokumentasi/2-ROWFILTER_COWNULL_RES.PNG)
+![](Dokumentasi/2-ROWFILTER_COWNULL_RES-2.PNG)
 
 - Tambahkan node DB GroupBy
 
