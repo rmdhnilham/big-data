@@ -113,5 +113,37 @@ Semua tabel sudah terganti nama
 
 # Modelling
 
+- Untuk data preparation sama seperti InDB Processing di atas sampai ke Row Filter yang membedakan cow IS NULL atau IS NOT NULL
+
+![](Dokumentasi/3-PREP.PNG)
+
+- Convert Number to String untuk cow IS NOT NULL
+
+![](Dokumentasi/3-CONVERTSTRING_DT.PNG)
+
+- Untuk cow IS NULL tambahkan Column Filter untuk menghilangkan kolom cow yang NULL
+
+![](Dokumentasi/3-REMOVECOLUMN.PNG)
+
+- Masukkan settingan seperti ini
+
+![](Dokumentasi/3-REMOVECOLUMN_SET.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/3-REMOVECOLUMN_RES.PNG)
+
+- Tambahkan Decision Tree Predictor dan sambunkan dari kedua bagian diatas
+
+![](Dokumentasi/3-DTPREDICT.PNG)
+
+- Setting seperti ini
+
+![](Dokumentasi/3-DTPREDICT_SET.PNG)
+
+- Maka hasilnya akan seperti ini 
+
+![](Dokumentasi/3-DTPREDICT_RES.PNG)
+
 
 # WritingToDB
