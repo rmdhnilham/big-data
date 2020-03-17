@@ -32,6 +32,84 @@ Semua tabel sudah terganti nama
 
 # InDB Processing
 
+- Connect SQLite seperti diatas
+
+![](Dokumentasi/2-CONNECT.PNG)
+
+- Select table yang akan diproses
+
+![](Dokumentasi/2-SELECT_TABLE.PNG)
+
+- Tambahkan Column Filter dan remove puma* dan pwgtp* pada tabel
+
+![](Dokumentasi/2-COL_FILTER.PNG)
+
+![](Dokumentasi/2-SETTING_PUMA_PWGTP.PNG)
+
+- Join kan tabel ss13hme dan ss13pme dengan menambahkan DB Joiner dengan acuan Serial No
+
+![](Dokumentasi/2-INNERJOIN_SERIALNO.PNG)
+
+- Setting seperti berikut
+
+![](Dokumentasi/2-INNERJOIN_SERIALNO_SET.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/2-INNERJOIN_SERIALNO_RES.PNG)
+
+- Menambahkan Row Filter
+
+![](Dokumentasi/2-ROWFILTER_COWNOTNULL.PNG)
+
+- Filter pada tabel cow yang tidak NULL
+
+![](Dokumentasi/2-ROWFILTER_COWNOTNULL_SET.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/2-ROWFILTER_COWNOTNULL_RES.PNG)
+
+- Tambahkan Row Filter lagi
+
+![](Dokumentasi/2-ROWFILTER_COWNULL.PNG)
+
+- Kali ini filter pada tabel cow yang NULL
+
+![](Dokumentasi/2-ROWFILTER_COWNULL_SET.PNG)
+
+- Hasilnya kosong karena tidak ada data NULL pada tabel cow
+
+![](Dokumentasi/2-ROWFILTER_COWNULL_RES.PNG)
+
+- Tambahkan node DB GroupBy
+
+![](Dokumentasi/2-GROUPBY.PNG)
+
+- Setting rata-rata umur dan group by jenis kelamin
+
+![](Dokumentasi/2-GROUPBY_SET.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/2-GROUPBY_RES.PNG)
+
+- Terakhir, sorting umur secara descending dan ambil top 10
+
+![](Dokumentasi/2-SORTBYAGEP.PNG)
+
+- Lakukan setting seperti ini pada sorting
+
+![](Dokumentasi/2-SORTBYAGEP_SET.PNG)
+
+- Lakukan setting seperti ini pada query mengambil 10 teratas
+
+![](Dokumentasi/2-SORTBYAGEP_SET-2.PNG)
+
+- Maka hasilnya akan seperti ini
+
+![](Dokumentasi/2-SORTBYAGEP_RES.PNG)
+
 
 # Modelling
 
