@@ -196,6 +196,6 @@ Semua tabel sudah terganti nama
 
 ![](Dokumentasi/4-DBUPDATE_RES.PNG)
 
-- Tambahkan node Filter Column untuk mengecek apakah sudah terupdate apa belum
+- Tambahkan Filter Column untuk mengecek apakah sudah terupdate apa belum
 
 ![](Dokumentasi/4-DBUPDATE_FILT.PNG)
