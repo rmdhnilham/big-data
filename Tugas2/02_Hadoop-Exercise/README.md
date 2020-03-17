@@ -46,4 +46,22 @@
 
 # WritingToDB
 
-- 
+- Lanjutan dari modelling diatas, berikut workflownya
+
+![](Dokumentasi/3-WORKFLOW.PNG)
+
+- Setting pada DB Table Creator
+
+![](Dokumentasi/3-DBCREATOR.PNG)
+
+- Setting pada DB Loader
+
+![](Dokumentasi/3-DBLOADER.PNG)
+
+- Kemudian jalankan workflownya
+
+![](Dokumentasi/3-WORKFLOW-RUN.PNG)
+
+- Cek pada Apache Hive di DBeaver apakah tabel sudah masuk
+
+![](Dokumentasi/3-SQLDBEAVER.PNG)
