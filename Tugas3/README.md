@@ -171,12 +171,12 @@ Kemungkinan proses yang dapat dilakukan pada dataset yang digunakan antara lain 
 - Didalam metanode Top 20 recommended movies terdapat sekumpulan node yang berfungsi untuk mengurutkan rekomendasi film berdasarkan rating terbaik dari data Training dan mengekstraknya sebanyak 20 film terbaik
 
 
-![](Dokumentasi/display-recomendation.PNG)
+![](Dokumentasi/display-recommendation.PNG)
 - Di dalam node Display Recommendations terdapat beberapa komponen
 - Node Display Recommendations sendiri berfungsi untuk menampilkan hasil rekomendasi pada portal web
 
 
-![](Dokumentasi/hasil-recomendation.PNG)
+![](Dokumentasi/hasil-recommendation.PNG)
 - Hasil rekomendasi apabila pada user ID 999999 menilai ke-20 film diawal dengan nilai 5 (apabila semua film kesukaannya)
 
 
