@@ -13,5 +13,5 @@
   - Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later).
   - Hyper-V and Containers Windows features must be enabled.
 
-![](Dokumentasi/installed-docker-desktop.PNG)
+![](Dokumentasi/installed-docker-desktop-2.PNG)
 - Setelah menginstall Docker Desktop, maka ikon tersebut akan muncul pada bagian kanan taskbar
