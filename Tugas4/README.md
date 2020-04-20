@@ -27,11 +27,15 @@
 
 ![](Dokumentasi/create-network.PNG)
 - Pertama-tama membuat docker network untuk menjalankan ZooKeeper
-```docker network create kafka-net --driver bridge```
+```
+docker network create kafka-net --driver bridge
+```
 
 ![](Dokumentasi/docker-run.PNG)
 - Setelah itu jalankan container ZooKeeper dari [Bitmani ZooKeeper](https://bitnami.com/stack/zookeeper)
-```docker run --name zookeeper-server -p 2181:2181 --network kafka-net -e ALLOW_ANONYMOUS_LOGIN=yes bitnami/zookeeper:latest```
+```
+docker run --name zookeeper-server -p 2181:2181 --network kafka-net -e ALLOW_ANONYMOUS_LOGIN=yes bitnami/zookeeper:latest
+```
 - ZooKeeper disini berfungsi sebagai cluster manager
 - Untuk bagian ALLOW_ANONYMOUS_LOGIN dibuat setting yes untuk memudahkan mengakses ZooKeeper, untuk penggunaan yang lebih professional tidak dianjurkan
 
@@ -40,7 +44,9 @@
 
 ![](Dokumentasi/run-broker.PNG)
 - Setelah ZooKeeper berhasil dijalankan, kemudian saatnya untuk menjalankan Kafka server
-```docker run --name kafka-server1 --network kafka-net -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -p 9092:9092 bitnami/kafka:latest```
+```
+docker run --name kafka-server1 --network kafka-net -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -p 9092:9092 bitnami/kafka:latest
+```
 
 ![](Dokumentasi/runned.PNG)
 - Infrastuktur kafka telah berhasil dibuat
@@ -60,7 +66,9 @@
 ## Catatan
 
 - Untuk tambahan pembuatan broker dapat menggunakan command seperti diatas, dengan memberi nama yang berbeda
-```docker run --name kafka-server2 --network kafka-net -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -p 9092:9092 bitnami/kafka:latest```
+```
+docker run --name kafka-server2 --network kafka-net -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -p 9092:9092 bitnami/kafka:latest
+```
 
 - Untuk pembuatan infrastruktur menggunakan Docker compose, cukup hanya membuat script bernama ``docker-compose.yml`` yang berisi:
 ```
@@ -105,7 +113,9 @@ services:
       - zookeeper-server
 ```
 - Setelah membuat script tersebut, lakukan command seperti berikut pada cmd di direktori script:
-```docker-compose up -d```
+```
+docker-compose up -d
+```
 - Maka docker akan secara langsung membuat infrastruktur tersebut
 
 ## ~ Infrastruktur sudah siap digunakan ~
