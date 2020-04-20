@@ -35,7 +35,7 @@
 - ZooKeeper disini berfungsi sebagai cluster manager
 - Untuk bagian ALLOW_ANONYMOUS_LOGIN dibuat setting yes untuk memudahkan mengakses ZooKeeper, untuk penggunaan yang lebih professional tidak dianjurkan
 
-![](Dokumentasi/tellnet.PNG)
+![](Dokumentasi/telnet.PNG)
 - ZooKeeper dijalankan pada port 2181, cek konektivitas menggunakan telnet
 
 ![](Dokumentasi/run-broker.PNG)
