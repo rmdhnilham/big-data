@@ -63,7 +63,8 @@
 ```docker run --name kafka-server2 --network kafka-net -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -p 9092:9092 bitnami/kafka:latest```
 
 - Untuk pembuatan m=infrastruktur menggunakan Docker compose, cukup hanya membuat script bernama ``docker-compose.yml`` yang berisi:
-```version: '2.1'
+```
+version: '2.1'
 
 networks:
   kafka-net:
@@ -101,7 +102,8 @@ services:
       - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9093
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
-      - zookeeper-server```
+      - zookeeper-server
+```
 - Setelah membuat script tersebut, lakukan command seperti berikut pada cmd di direktori script:
 ```docker-compose up -d```
 - Maka docker akan secara langsung membuat infrastruktur tersebut
