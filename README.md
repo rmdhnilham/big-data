@@ -8,3 +8,4 @@
 - [ETL Menggunakan KNIME](https://github.com/rmdhnilham/big-data/tree/master/Tugas1)
 - [Eksplorasi KNIME Big Data](https://github.com/rmdhnilham/big-data/tree/master/Tugas2)
 - [Implementasi Algoritma Rekomendasi](https://github.com/rmdhnilham/big-data/tree/master/Tugas3)
+- [Implementasi Infrastruktur Kafka](https://github.com/rmdhnilham/big-data/tree/master/Tugas4)
