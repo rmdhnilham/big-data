@@ -67,7 +67,7 @@ docker-compose up
 ```
 docker exec -it <container_id> /bin/bash
 ```
-![](Dokumentasi/bash-1.PNG)
+![](Dokumentasi/bash-1.png)
 
 - Cek alamat IP spark master menggunakan
 ```
@@ -84,7 +84,7 @@ spark-submit --master spark://172.19.0.4:7077 examples/src/main/python/pi.py 100
 - Konstanta 100 merupakan partisi dari proses penghitungan Pi yang akan dijalankan
 - Cek kembali web [http://localhost:8080](http://localhost:8080) untuk memonitoring proses
 - Apabila proses sedang berlangsung akan muncul tampilan seperti berikut:
-![](Dokumentasi/used-1.PNG)
+![](Dokumentasi/used-1.png)
 
 - Tunggu sampai perintah selesai dijalankan
 ![](Dokumentasi/jobdone.PNG)
@@ -98,7 +98,7 @@ spark-submit --master spark://172.19.0.4:7077 examples/src/main/python/pi.py 100
     - Partisi: 100, 1000
     
 - Hasil perbadingan menggunakan 2 worker dengan 2 CPU antara 100 dan 1000 partisi
-![](Dokumentasi/compare.PNG)
+![](Dokumentasi/compare.png)
 
 - Hasil perbadingan menggunakan 5 worker dengan 4 CPU antara 100 dan 1000 partisi
 ![](Dokumentasi/compare-1.PNG)
