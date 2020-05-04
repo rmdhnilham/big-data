@@ -178,7 +178,7 @@ services:
 
 
 ## Kesimpulan
-- Dalam percobaan diatas, pada pemakaian 2 worker dan 2 CPU (core), penggunaan 100 partisi selesai pada 44 detik sedangkan pada penggunaan 1000 partisi selesai pada 3,4 menit atau sama dengan sekitar 3 menit 24 detik. mengapa itu bisa terjadi dikarenakan terdapat overhead proses map-reduce. yaitu waktu lebih banyak terbuang di proses map-reduce (pembagian kerja dan pengumpulan hasil).
-- Pada pemakaian 5 dan 4 CPU (core), penggunaan 1000 partisi selesai pada 44 detik sedangkan pada penggunaan 100 partisi selesai pada 2,9 menit atau sama dengan sekitar 2 menit 54 detik.
+- Dalam percobaan diatas, pada pemakaian 2 worker dan 2 CPU (core), penggunaan 100 partisi selesai pada 44 detik sedangkan pada penggunaan 1000 partisi selesai pada 3,4 menit atau sama dengan sekitar 3 menit 24 detik. pada proses terdapat overhead proses map-reduce. yang mana waktu lebih banyak terbuang di proses map-reduce (pembagian kerja dan pengumpulan hasil).
+- Pada pemakaian 5 dan 4 CPU (core), penggunaan 100 partisi selesai pada 44 detik sedangkan pada penggunaan 1000 partisi selesai pada 2,9 menit atau sama dengan sekitar 2 menit 54 detik.
 - Bisa disimpulkan bahwa dengan menambah worker dengan 0 CPU (tanpa CPU) maka worker tersebut tidak akan melakukan proses pencarian pi, dan dengan menambahkan worker/CPU tersebut masih didapati overhead proses map-reduce. Pada perbandingan 100 partisi antara 2 dan 4 core, tidak terlalu terlihat beda yang signifikan dikarenakan job/task yang dikerjakan masih tergolong sedikit, namun dalam pengerjaan menggunakan 1000 partisi dapa dilihat perbedaan antara 2 dan 4 core, dimana 4 core menyelesaikan proses lebih cepat dikarenakan melakukan pembagian kerja pada lebih banyak core yang mengakibatkan job/task lebih sedikit pada masing-masing core.
 - Spesifikasi dari prosesor komputer juga berpengaruh pada proses penjalanan task, dapat dilihat dari core dan thread komputer yang digunakan.
