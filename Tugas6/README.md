@@ -19,6 +19,7 @@ Kemungkinan proses yang dapat dilakukan pada dataset yang digunakan antara lain 
 ## Data Understanding
 
 ![](Dokumentasi/dataset.PNG)
+
 Data yang digunakan pada proses kali ini adalah [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris) dimana dataset ini  merupakan dataset yang paling terkenal dari Ronald Aylmer Fisher yang sering digunakan dalam literasi seputar pattern recognition. Dataset ini berisi tentang bunga iris yang memiliki 3 class dan 50 jenis pada setiap class dimana 1 class terpisah secara linear dari lainnya.
 Adapun atribut yang digunakan meliputi:
 - sepal length in cm
@@ -26,9 +27,9 @@ Adapun atribut yang digunakan meliputi:
 - petal length in cm
 - petal width in cm
 - class:
- - Iris Setosa
- - Iris Versicolour
- - Iris Virginica 
+   - Iris Setosa
+   - Iris Versicolour
+   - Iris Virginica 
 
 
 ## Data Preparation
