@@ -3,8 +3,8 @@
 **Nama**  : Ramadhan Ilham Irfany<br>
 **NRP**   : 05111740000121<br><br><br>
 
-- [MLlib model to PMML](https://github.com/rmdhnilham/big-data/tree/master/Tugas6#MLlib%20model%20to%20PMML)
-- []()
+- [MLlib model to PMML](https://github.com/rmdhnilham/big-data/tree/master/Tugas6#mllib-model-to-pmml)
+- [Spark Compiled Model Predictor](https://github.com/rmdhnilham/big-data/tree/master/Tugas6#spark-compiled-model-predictor)
 
 # MLlib model to PMML
 
