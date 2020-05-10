@@ -65,15 +65,15 @@ Adapun atribut yang digunakan meliputi:
 - Kemudian menambahkan node **PMML Compiler** untuk menerjemahkan model PMML ke Java yang nantinya akan dijalankan oleh node **Compiled Model Predictor
 <br>
 
-![](Dokumentasi/kmeans-config.PNG)
+![](Dokumentasi/kmeans.PNG)
 - Konfigurasi pada node **Spark k-Means**
 <br>
 
-![](Dokumentasi/mllib-config.PNG)
+![](Dokumentasi/mllib.PNG)
 - Konfigurasi pada node **Spark MLlib to PMML**
 <br>
 
-![](Dokumentasi/compiler-config.PNG)
+![](Dokumentasi/compiler.PNG)
 - Konfigurasi pada node **PMML Compiler**
 <br>
 
