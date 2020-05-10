@@ -10,3 +10,4 @@
 - [Implementasi Algoritma Rekomendasi](https://github.com/rmdhnilham/big-data/tree/master/Tugas3)
 - [Implementasi Infrastruktur Kafka](https://github.com/rmdhnilham/big-data/tree/master/Tugas4)
 - [Membuat Apache Spark Cluster Menggunakan Docker](https://github.com/rmdhnilham/big-data/tree/master/Tugas5)
+- [MLlib model to PMML & Spark Compiled Model Predictor](https://github.com/rmdhnilham/big-data/tree/master/Tugas6)
