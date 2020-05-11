@@ -60,7 +60,7 @@ Adapun atribut yang digunakan meliputi:
 ## Modelling
 
 ![](Dokumentasi/model.PNG)
-- Menambahkan node **Spark k-Means** untuk train model ke dalam spark
+- Menambahkan node **Spark k-Means** untuk train model ke dalam spark dengan menggunakan 4 variabel dari bunga Iris pada dataset
 - Lalu menambahkan node **Spark MLlib to PMML** untuk mengubah model di dalam spark menjadi PMML
 - Kemudian menambahkan node **PMML Compiler** untuk menerjemahkan model PMML ke Java yang nantinya akan dijalankan oleh node **Compiled Model Predictor
 <br>
