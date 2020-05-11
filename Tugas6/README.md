@@ -105,7 +105,7 @@ Adapun atribut yang digunakan meliputi:
 
 ## Deployment
 
-![](Dokumentasi/deploy.PNG)
+![](Dokumentasi/deploy1.PNG)
 - Untuk deployment, pertama-tama memasukkan inputan JSON variabel bunga Iris yang ingin diklasifikasi dengan menambahkan node **Container Input (JSON)**
 - Lalu menambahkan node **JSON to Table** untuk mengubah input JSON menjadi tabel multi kolom
 - Kemudian menambahkan node **Compiled Model Predictor** untuk membuat prediction
@@ -260,7 +260,7 @@ Adapun atribut yang digunakan meliputi:
 
 ## Deployment
 
-![](Dokumentasi/deploy.PNG)
+![](Dokumentasi/deploy2.PNG)
 - Karena pada workflow orisinil tidak terdapat proses deployment, maka untuk deployment saya akan mendeploy confusion matrix ke dalam sebuah file berformat (.csv) dengan menambahkan node **CSV Writer**
 <br>
 
@@ -269,8 +269,8 @@ Adapun atribut yang digunakan meliputi:
 <br>
 
 ![](Dokumentasi/csv-result.PNG)
-![](Dokumentasi/csv-result1.PNG)
-- Hasil dari confusion matrix yang telah dideploy menjadi file (.csv)
+![](Dokumentasi/csv-result2.PNG)
+- Hasil dari scorer yang telah dideploy menjadi file (.csv)
 
 
 ## Keseluruhan workflow KNIME
