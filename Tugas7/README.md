@@ -163,19 +163,38 @@ from #table#
 
 
 ### 2. Agreagations and time series
-
+![](Dokumentasi/aggregation-and-time-series/aats-metanode.PNG)
+- Metanode ini adalah untuk membuat time-series berdasarkan 9 kategori pada **Business Understanding** yaitu:
+   - **Total Usage**: Keseluruhan Penggunaan Listrik.
+   - **Usage by Year**: Penggunaan Listrik per Tahun.
+   - **Usage by Month**: Penggunaan Listrik per Bulan.
+   - **Usage by Week**: Penggunaan Listrik per Minggu.
+   - **Usage by Day of Week**: Penggunaan Listrik per Hari dalam Seminggu.
+   - **Usage by Day**: Penggunaan Listrik per Hari.
+   - **Usage by Day Segment**: Penggunaan Listrik per Hari pada Periode Jam Tertentu.
+   - **Usage by Day Classifier**: Penggunaan Listrik pada Pengelompokan Weekend dan Weekday.
+   - **Usage by Hour**: Penggunaan Listrik pada Jam Tertentu.
+- Gambaran prosesnya adalah:
+	- Pengambilan jumlah penggunaan listrik dengan menggunakan agregasi SUM untuk tiap kategori
+	- Lalu pada kategori selain **Total Usage** diambil rata-rata penggunaan listrik tiap kategori menggunakan agregasi AVG
+	- Sebagai catatan pada kategori **Usage by Day of Week**, **Usage by Day Segment**, dan **Usage by Day Classifier** perlu dibuatkan pivot untuk mengelompokkan kolom tiap-tiap kluster
+	- Setelah itu semua kategori diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
+- Berikut ini adalah dokumentasi untuk tiap-tiap kategori:
+#### Total Usage
+#### Usage by Year
+#### Usage by Month
+#### Usage by Week
+#### Usage by Day of Week
+#### Usage by Day
+#### Usage by Day Segment
+#### Usage by Day Classifier
+#### Usage by Hour
 
 ### 3. Spark SQL Query
+- Pada node ini diproses query untuk membuat dan menambahkan kolom reta-rata penggunaan pada hari di tiap minggu tertentu dan juga periode jam pada hari tertentu
+![](Dokumentasi/aggregation-and-time-series/after-aats.PNG)
 
-
-### 4. PCA, K-means, Scatter Plot
-
-
-## Deployment
-
-
-SQL:
-
+- Berikut SQL Query yang ada pada node tersebut
 ```
 SELECT `meterID`, `totalKW`, `avgYearlyKW`,`avgMonthlyKW`,`avgWeeklyKW`,
        `avgMonday`,`avgTuesday`,`avgWednesday`,`avgThursday`,`avgFriday`,`avgSaturday`,`avgSunday`,
@@ -195,3 +214,12 @@ SELECT `meterID`, `totalKW`, `avgYearlyKW`,`avgMonthlyKW`,`avgWeeklyKW`,
        
 FROM #table#
 ```
+
+- Berikut hasil dari keseluruhan kolom yang siap untuk di plootting pada tabel
+![](Dokumentasi/aggregation-and-time-series/after-aats-result.PNG)
+
+
+### 4. PCA, K-means, Scatter Plot
+
+
+## Deployment
