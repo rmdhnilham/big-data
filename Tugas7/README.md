@@ -27,9 +27,40 @@ Data yang digunakan pada proses kali ini adalah Data Penggunaan Listrik di Irlan
  
 
 ## Data Preparation
+![](Dokumentasi/data-preparation/dataprep.PNG)
+- Pertama-tama membuat spark context local menggunakan node **Create Local Big Data Environment**
+- Lalu membaca dataset Penggunaan Listrik di Irlandia dengan **File Reader**
+
+- Berikut konfigurasi node **Create Local Big Data Environment**
+![](Dokumentasi/data-preparation/createenvirontment-config.PNG)
+
+- Dan berikut untuk konfigurasi node **File Reader**
+![](Dokumentasi/data-preparation/filereader-config.PNG)
 
 
 ## Modelling
+![](Dokumentasi/modelling/modelling.PNG)
+- Pertama dengan menambahkan metanode **Load Data** yang berisikan node-node sebagai berikut
+![](Dokumentasi/modelling/loaddata-metanode.PNG)
+
+- Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "meter"
+![](Dokumentasi/modelling/loaddata-creator.PNG)
+
+- Untuk konfigurasi node **DB Loader** adalah seperti berikut
+![](Dokumentasi/modelling/loaddata-loader.PNG)
+
+- Setelah itu data sudah masuk pada DB dan siap untuk diproses lebih jauh
+![](Dokumentasi/modelling/loaddata-result.PNG)
+
+- Untuk optional dapat di cek pada DBeaver apakah DB sudah masuk pada Hive atau belum, pertama dengan mengecek port pada node **Create Local Big Data Environment**
+![](Dokumentasi/modelling/loaddata-alamat-hive.PNG)
+
+- Setelah itu masuk ke DBeaver dan membuka Apache Hive dengan URL
+```
+jdbc:hive2://localhost:56063/
+```
+- Kemudian lakukan query untuk melihat data pada tabel meter yang sudah dibuat diatas
+![](Dokumentasi/modelling/loaddata-hive.PNG)
 
 
 ## Evaluation
