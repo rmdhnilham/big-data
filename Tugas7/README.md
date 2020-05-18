@@ -62,7 +62,7 @@ jdbc:hive2://localhost:56063/
 - Kemudian lakukan query untuk melihat data pada tabel meter yang sudah dibuat diatas
 ![](Dokumentasi/modelling/loaddata-hive.PNG)
 
-- Setelah Data berhasil di load, kemundian ubah menjadi data Spark dengan node **Hive to Spark** dengan konfigurasi sebagai berikut
+- Setelah Data berhasil di load, kemundian ubah menjadi data Spark dengan node **Hive to Spark** dengan konfigurasi sebagai berikut<br>
 ![](Dokumentasi/modelling/hivetospark.PNG)
 
 
@@ -74,7 +74,7 @@ jdbc:hive2://localhost:56063/
 3. Node **Spark SQL Query**: query untuk menghitung persentase dari penggunaan listrik secara per hari, dan pada hari saat periode jam tertentu
 4. Komponen **PCA, K-means, Scatter Plot**: untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
 
-###1. Extract date-time attributes
+### 1. Extract date-time attributes
 - Untuk metanode Extract date-time attributes bersikan oleh 4 node **Spark SQL Query** sebagai berikut
 ![](Dokumentasi/extract-date-time-attributes/edta-metanode.PNG)
 
@@ -162,13 +162,13 @@ from #table#
 ![](Dokumentasi/extract-date-time-attributes/edta-spark-query-result-3.PNG)
 
 
-###2. Agreagations and time series
+### 2. Agreagations and time series
 
 
-###3. Spark SQL Query
+### 3. Spark SQL Query
 
 
-###4. PCA, K-means, Scatter Plot
+### 4. PCA, K-means, Scatter Plot
 
 
 ## Deployment
