@@ -46,7 +46,7 @@ Data yang digunakan pada proses kali ini adalah Data Penggunaan Listrik di Irlan
 - Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "meter"
 ![](Dokumentasi/modelling/loaddata-creator.PNG)
 
-- Untuk konfigurasi node **DB Loader** adalah seperti berikut
+- Untuk konfigurasi node **DB Loader** adalah seperti berikut<br>
 ![](Dokumentasi/modelling/loaddata-loader.PNG)
 
 - Setelah itu data sudah masuk pada DB dan siap untuk diproses lebih jauh
@@ -62,14 +62,26 @@ jdbc:hive2://localhost:56063/
 - Kemudian lakukan query untuk melihat data pada tabel meter yang sudah dibuat diatas
 ![](Dokumentasi/modelling/loaddata-hive.PNG)
 
+- Setelah Data berhasil di load, kemundian ubah menjadi data Spark dengan node **Hive to Spark** dengan konfigurasi sebagai berikut
+![](Dokumentasi/modelling/hivetospark.PNG)
+
 
 ## Evaluation
+![](Dokumentasi/extract-date-time-attributes/evaluation.PNG)
+- Dalam proses evaluasi ini terbagi menjadi 2 metanode, 1 node, dan 1 komponen. Antara lain:
+1. Metanode **Extract date-time attributes**: untuk mendapatkan waktu agar dapat di proses untuk selanjutnya
+2. Metanode **Agreagations and time series**: agregasi penggunaan listrik pada 9 kategori pada **Bussiness Understanding**
+3. Node **Spark SQL Query**: query untuk menghitung persentase dari penggunaan listrik secara per hari, dan pada hari saat periode jam tertentu
+4. Komponen **PCA, K-means, Scatter Plot**: untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
 
+###1. Extract date-time attributes
+- Untuk metanode Extract date-time attributes bersikan oleh 4 node **Spark SQL Query** sebagai berikut
+![](Dokumentasi/extract-date-time-attributes/edta-metanode.PNG)
 
-## Deployment
+- Untuk node **Spark SQL Query** pertama yaitu untuk mengkonversikan datetime
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query.PNG)
 
-
-SQL:
+- Berikut SQL Query yang ada pada node tersebut
 ```
 SELECT 
 
@@ -84,7 +96,15 @@ concat(
 
 FROM #table# t1
 ```
+Dimana SQL tersebut akan membuat kolom eventDate yang diambil dari enc_datetime dan my_time yang memiliki format jj:mm
 
+- Berikut hasil dari query tersebut
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-result.PNG)
+
+- Untuk node **Spark SQL Query** kedua yaitu untuk mengekstrak eventDate menjadi jam, hari, minggu, bulan, tahun seperti 9 kategori pada **Bussiness Understanding**
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-1.PNG)
+
+- Berikut SQL Query yang ada pada node tersebut
 ```
 SELECT 
 
@@ -100,16 +120,30 @@ hour(my_time) as hour
 FROM #table# t1
 ```
 
+- Berikut hasil dari query tersebut
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-result-1.PNG)
+
+- Untuk node **Spark SQL Query** ketiga yaitu untuk mengelompokkan Weekend dan Weekday
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-2.PNG)
+
+- Berikut SQL Query yang ada pada node tersebut
 ```
 SELECT *, 
 CASE 
 WHEN dayOfWeek in ('Saturday','Sunday') 	THEN 'WE' 
-									        ELSE 'BD' 
+						ELSE 'BD' 
 END as dayClassifier
 
 from #table#
 ```
 
+- Berikut hasil dari query tersebut
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-result-2.PNG)
+
+- Untuk node **Spark SQL Query** terakhir pada metanode ini yaitu untuk membuat segmentasi periode jam pada satu hari
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-3.PNG)
+
+- Berikut SQL Query yang ada pada node tersebut
 ```
 SELECT meterID, kw30, eventDate, year, month, week, dayOfWeek, dayClassifier, hour,
 CASE 
@@ -123,6 +157,24 @@ END as daySegment
 
 from #table#
 ```
+
+- Berikut hasil dari query tersebut
+![](Dokumentasi/extract-date-time-attributes/edta-spark-query-result-3.PNG)
+
+
+###2. Agreagations and time series
+
+
+###3. Spark SQL Query
+
+
+###4. PCA, K-means, Scatter Plot
+
+
+## Deployment
+
+
+SQL:
 
 ```
 SELECT `meterID`, `totalKW`, `avgYearlyKW`,`avgMonthlyKW`,`avgWeeklyKW`,
