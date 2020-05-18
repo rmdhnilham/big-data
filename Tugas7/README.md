@@ -185,8 +185,8 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan jumlah penggunaan listrik dengan menggunakan agregasi SUM pada kategori **Total Usage**
 ![](Dokumentasi/aggregation-and-time-series/aats-total-groupby.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
-![](Dokumentasi/aggregation-and-time-series/aats-total-rename.PNG)
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **totalKW** agar mudah untuk dibaca
+![](Dokumentasi/aggregation-and-time-series/fix.jpg)
 
 #### Usage by Year
 ![](Dokumentasi/aggregation-and-time-series/aats-year.PNG)
@@ -196,7 +196,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Year** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-year-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgYearlyKW** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-year-rename.PNG)
 
 #### Usage by Month
@@ -207,7 +207,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Month** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-month-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgMonthlyKW** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-month-rename.PNG)
 
 #### Usage by Week
@@ -218,7 +218,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Week** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-week-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgWeeklyKW** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-week-rename.PNG)
 
 #### Usage by Day of Week
@@ -229,7 +229,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day of Week** menggunakan agregasi AVG dan juga mengelompokkan hari pada kolom baru
 ![](Dokumentasi/aggregation-and-time-series/aats-dow-pivot.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg(Nama hari)** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-dow-rename.PNG)
 
 #### Usage by Day
@@ -240,7 +240,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-day-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgDaily** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-day-rename.PNG)
 
 #### Usage by Day Segment
@@ -251,7 +251,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day Segment** menggunakan agregasi AVG dan juga mengelompokkan periode jam dalam satu hari pada kolom baru
 ![](Dokumentasi/aggregation-and-time-series/aats-segment-pivot.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(segmentasi)** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-segment-rename.PNG)
 
 #### Usage by Day Classifier
@@ -262,7 +262,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day Classifier** menggunakan agregasi AVG dan juga mengelompokkan periode jenis hari Weekend atau Weekday pada kolom baru
 ![](Dokumentasi/aggregation-and-time-series/aats-class-pivot.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(klasifikasi)** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-rename.PNG)
 
 #### Usage by Hour
@@ -273,7 +273,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Hour** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-hour-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_Hourly** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-hour-rename.PNG)
 
 
