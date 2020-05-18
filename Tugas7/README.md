@@ -92,3 +92,23 @@ END as daySegment
 
 from #table#
 ```
+
+```
+SELECT `meterID`, `totalKW`, `avgYearlyKW`,`avgMonthlyKW`,`avgWeeklyKW`,
+       `avgMonday`,`avgTuesday`,`avgWednesday`,`avgThursday`,`avgFriday`,`avgSaturday`,`avgSunday`,
+       `avgDaily`,`avg_7to9`,`avg_9to13`,`avg_13to17`,`avg_17to21`,`avg_21to7`,`avg_BD`,`avg_WE`,`avgHourly`,
+       (avgMonday / avgWeeklyKW) * 100.0 as pctMonday,
+       (avgTuesday / avgWeeklyKW) * 100.0 as pctTuesday,
+       (avgWednesday / avgWeeklyKW) * 100.0 as pctWednesday,
+       (avgThursday / avgWeeklyKW) * 100.0 as pctThursday,
+       (avgFriday / avgWeeklyKW) * 100.0 as pctFriday,
+       (avgSaturday / avgWeeklyKW) * 100.0 as pctSaturday,
+       (avgSunday / avgWeeklyKW) * 100.0 as pctSunday,
+       (avg_7to9 / avgDaily) * 100.0 as pct_7to9,
+       (avg_9to13 / avgDaily) * 100.0 as pct_9to13,
+       (avg_13to17 / avgDaily) * 100.0 as pct_13to17,
+       (avg_17to21 / avgDaily) * 100.0 as pct_17to21,
+       (avg_21to7 / avgDaily) * 100.0 as pct_21to7
+       
+FROM #table#
+```
