@@ -11,3 +11,5 @@
 - [Implementasi Infrastruktur Kafka](https://github.com/rmdhnilham/big-data/tree/master/Tugas4)
 - [Membuat Apache Spark Cluster Menggunakan Docker](https://github.com/rmdhnilham/big-data/tree/master/Tugas5)
 - [MLlib model to PMML & Spark Compiled Model Predictor](https://github.com/rmdhnilham/big-data/tree/master/Tugas6)
+- [Analisis Kebutuhan Listrik di Irlandia](https://github.com/rmdhnilham/big-data/tree/master/Tugas7)
+- [(EAS) Analisis time series menggunakan KNIME (Apache Spark)](https://github.com/rmdhnilham/big-data/tree/master/EAS)
