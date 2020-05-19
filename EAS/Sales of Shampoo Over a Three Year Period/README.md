@@ -209,7 +209,7 @@ FROM #table# t1
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-revisi-view-shampoo-result.PNG)
 
 - Kemudian pada denormalisasi ubahlah menjadi spark kembali menggunakan **Table to Spark**
-- PCA dimension dapat diubah nama menggunakan node **Spark Column Rename**<br>
+- Menghilangkan underscore pada PCA dimension untuk deployment menggunakan node **Spark Column Rename**<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-rename.PNG)
 
 
