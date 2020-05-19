@@ -208,3 +208,19 @@ FROM #table# t1
 
 
 ## Deployment
+![](Dokumentasi/deploy.PNG)
+
+- Pada proses deployment di workflow ini terdapat 2 deployment yaitu menggunakan node **Spark to Hive** dan **Spark to Parquet**
+- Berikut konfigurasi pada node **Spark to Hive**<br>
+![](Dokumentasi/deployment/deploy-hive.PNG)
+
+dikarenakan saya mengerjakan 4 dataset simultan maka saya akan mengatur **Remove table** jika table sudah ada sebelumnya
+- Dan berikut hasil dari deployment<br>
+![](Dokumentasi/deployment/deploy-hive-result.PNG)
+
+- Berikut konfigurasi pada node **Spark to Parquet**<br>
+![](Dokumentasi/deployment/deploy-parquet.PNG)
+
+untuk parquet-nya sama seperti hive dikarenakan saya mengerjakan simultan maka saya rename **Target name** sesuai dataset
+- Dan berikut hasil deploymentnya<br>
+![](Dokumentasi/deployment/deploy-parquet-result.PNG)
