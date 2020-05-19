@@ -42,18 +42,18 @@ pastikan membuka file dataset (.csv) yang terlampir
 ![](Dokumentasi/data-preparation/loaddata-loader.PNG)
 
 - Setelah itu data sudah masuk pada DB dan siap untuk diproses lebih jauh, cek pada Apache Hive apakah sudah masuk<br>
-![](Dokumentasi/modelling/loaddata-hive.PNG)
+![](Dokumentasi/data-preparation/loaddata-hive.PNG)
 
 - Setelah Data berhasil di load, kemundian ubah menjadi data Spark untuk pemodelan dengan node **Hive to Spark**<br>
-![](Dokumentasi/modelling/hivetospark.PNG)
+![](Dokumentasi/data-preparation/hivetospark.PNG)
 
 
 ## Modelling
 ![](Dokumentasi/modelling.PNG)
 
 - Pada model ini terdapat 2 metanode yaitu:
-	   1. **Extract date-time attributes**: untuk mendapatkan waktu agar dapat di proses untuk selanjutnya
-	   2. **Agreagations and time series**: agregasi untuk mencari rata-rata Produksi Listrik per Tahun dalam satuan waktu Bulan
+	1. **Extract date-time attributes**: untuk mendapatkan waktu agar dapat di proses untuk selanjutnya
+	2. **Agreagations and time series**: agregasi untuk mencari rata-rata Produksi Listrik per Tahun dalam satuan waktu Bulan
 	
  ### 1. Extract date-time attributes
 - Untuk metanode Extract date-time attributes bersikan oleh 2 node **Spark SQL Query** sebagai berikut<br>
@@ -102,8 +102,8 @@ FROM #table# t1
    
 - Gambaran prosesnya adalah:
   	- Pengambilan jumlah produksi listrik dengan menggunakan agregasi SUM untuk tiap kategori dengan memakai **month** sebagai parameter GroupBy
-	  - Pada kategori **Usage by Year** diambil rata-rata produksi listrik tiap tahun dalam satuan waktu bulan menggunakan agregasi AVG
-	  - Semua hasil agregasi diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
+	- Pada kategori **Usage by Year** diambil rata-rata produksi listrik tiap tahun dalam satuan waktu bulan menggunakan agregasi AVG
+	- Semua hasil agregasi diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
    
 - Sebelum memproses data tambahkan node **Persist Spark DataFream/RDD** dengan konfigurasi sebagai berikut<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-persisi.PNG)
@@ -143,6 +143,68 @@ FROM #table# t1
 
 
 ## Evaluation
+![](Dokumentasi/eval.PNG)
+
+- Pada tahap Evaluasi menggunakan komponen-komponen seperti **PCA, K-means, Scatter Plot** untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
+- Berikut isi dari komponen **PCA, K-means, Scatter Plot**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-metanode.PNG)
+
+- Pertama-tama melakukan normalisasi menggunakan node **Spark Normalizer**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-normalizer.PNG)
+
+- Kemundian melakukan PCA (**Principal Component Analysis**). Dikarenakan dataset berukukan kecil maka saya menggunakan 100% dari dataset<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-pca.PNG)
+
+- Beginilah hasil dari PCA yang telah dilakukan<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-pca-result.PNG)
+
+- Lalu untuk pengelompokan cluster mengunakan algoritma K-means dengan node **Spark k-Means**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-kmeans.PNG)
+
+- Dan beginilah hasil dari pengelompokan K-means<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-kmeans-result.PNG)
+
+- Tambahkan column filter untuk menampilkan month dan cluster<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-columnfilter.PNG)
+
+- Beginilah hasilnya setelah di filter<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-columnfilter-result.PNG)
+
+- Setelah itu tambahkan joiner seperti dengan parameter "month"<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-join.PNG)
+
+- Dan beginilah hasil setelah menggabungkan **PCA** dan **K-Means**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-join-result.PNG)
+
+- Kemudian tambahkan node **Spark to Table** untuk mengubah data spark menjadi table
+- Setelah itu lakukan denormalisasi untuk membuat table view
+- Lalu tambahkan node **Number to String** untuk keperluan kustomisasi tabel dengan konfigurasi sebagai berikut<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-number.PNG)
+
+- Beginilah hasil input untuk kustomisasi tabel<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-number-result.PNG)
+
+- Lalu atur warna pada cluster menggunakan node **Color Manager**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-color.PNG)
+
+- Beginilah hasil dari pewarnaan cluster dalam bentuk tabel<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-color-result.PNG)
+
+- Kemudian lakukan plotting menggunakan node **Scatter Plot**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-plot.PNG)
+
+- Beginilah hasil dari plotting menggunakan **Scatter Plot**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-plot-result.PNG)
+
+- Setelah itu membuat node **Table View**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-view.PNG)
+
+- Dan beginilah tampilan JavaScript untuk tabel<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-view-result.PNG)
+
+- Kemudian pada denormalisasi ubahlah menjadi spark kembali menggunakan **Table to Spark**
+- PCA dimension dapat diubah nama menggunakan node **Spark Column Rename**<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-rename.PNG)
 
 
 ## Deployment
