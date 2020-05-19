@@ -366,3 +366,23 @@ FROM #table#
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-rename.PNG)
 
 ## Deployment
+![](Dokumentasi/deploy.PNG)
+- Pada proses deployment di workflow ini terdapat 2 deployment yaitu menggunakan node **Spark to Hive** dan **Spark to Parquet**
+- Berikut konfigurasi pada node **Spark to Hive**
+![](Dokumentasi/deployment/deployment-hive-config.PNG)
+
+- Dan berikut hasil dari deployment
+![](Dokumentasi/deployment/deployment-hive-result.PNG)
+
+- Untuk opsional dapat dilihat pada Hive menggunakan DBeaver
+![](Dokumentasi/deployment/deployment-hive-result-db.PNG)
+
+- Berikut konfigurasi pada node **Spark to Parquet**
+![](Dokumentasi/deployment/deployment-parquet-config.PNG)
+
+- Dan berikut hasil deploymentnya
+![](Dokumentasi/deployment/deployment-parquet-result.PNG)
+
+## Keseluruhan workflow KNIME
+
+![](Dokumentasi/workflow.PNG)
