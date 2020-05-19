@@ -196,8 +196,8 @@ FROM #table# t1
 - Beginilah hasil dari plotting menggunakan **Scatter Plot**<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-plot-result.PNG)
 
-- Setelah itu membuat node **Table View**<br>
-![](Dokumentasi/pca-kmeans-scatter-plot/pca-revisi-view-beer.PNG)
+- Setelah itu membuat node **Table View** untuk membuat tabel Aggregated Beer Data<br>
+![](Dokumentasi/pca-kmeans-scatter-plot/revisi.PNG)
 
 - Dan beginilah tampilan JavaScript untuk tabel<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-revisi-view-beer-result.PNG)
