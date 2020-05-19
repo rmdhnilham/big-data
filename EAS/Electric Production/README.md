@@ -17,7 +17,7 @@ Data yang digunakan pada proses kali ini adalah Data Produksi Elektrik dengan at
 - **IPG2211A2N**: Satuan utilitas elektrik dan gas.
 
 ## Data Preparation
-Untuk menjalankan workflow ini dapar di ambil dalam repository pada folder ini dan menggunakan dataset yang juga sudah terlampir<br>
+Untuk menjalankan workflow ini dapat di ambil dalam repository pada folder ini dan menggunakan dataset yang juga sudah terlampir<br>
 
 ![](Dokumentasi/dataprep.PNG)
 
