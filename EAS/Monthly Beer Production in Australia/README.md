@@ -141,6 +141,12 @@ FROM #table# t1
 - Hasil dari pengubahan nama<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-year-rename-result.PNG)
 
+- Setelah selesai memproses 2 kategori, buatlah node **Spark Joiner** untuk menggabungkan kategori tersebut untuk proses selanjutnya
+![](Dokumentasi/aggregation-and-time-series/aats-join.PNG)
+
+- Dan inilah data yang akan digunakan untuk tahap evaluasi
+![](Dokumentasi/aggregation-and-time-series/aats-join-result.PNG)
+
 
 ## Evaluation
 ![](Dokumentasi/eval.PNG)
