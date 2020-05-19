@@ -181,7 +181,7 @@ from #table#
 ![](Dokumentasi/aggregation-and-time-series/aats-total-groupby.PNG)
 
 - Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **totalKW** agar mudah untuk dibaca
-![](Dokumentasi/aggregation-and-time-series/fix.jpg)
+![](Dokumentasi/aggregation-and-time-series/aggregation-and-time-series/fix.PNG)
 
 #### Usage by Year
 ![](Dokumentasi/aggregation-and-time-series/aats-year.PNG)
@@ -202,7 +202,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Month** menggunakan agregasi AVG
 ![](Dokumentasi/aggregation-and-time-series/aats-month-groupby-1.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgMonthlyKW** agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgMonthlyKW** agar mudah untuk dibaca<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-month-rename.PNG)
 
 #### Usage by Week
@@ -246,7 +246,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day Segment** menggunakan agregasi AVG dan juga mengelompokkan periode jam dalam satu hari pada kolom baru
 ![](Dokumentasi/aggregation-and-time-series/aats-segment-pivot.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(segmentasi)** agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(segmentasi)** agar mudah untuk dibaca<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-segment-rename.PNG)
 
 #### Usage by Day Classifier
@@ -257,7 +257,7 @@ from #table#
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penggunaan listrik pada kategori **Usage by Day Classifier** menggunakan agregasi AVG dan juga mengelompokkan periode jenis hari Weekend atau Weekday pada kolom baru
 ![](Dokumentasi/aggregation-and-time-series/aats-class-pivot.PNG)
 
-- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(klasifikasi)** agar mudah untuk dibaca
+- Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_(klasifikasi)** agar mudah untuk dibaca<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-rename.PNG)
 
 #### Usage by Hour
@@ -305,6 +305,7 @@ FROM #table#
 - Setelah itu menambahkan komponen **PCA, K-means, Scatter Plot** untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
 - Berikut isi dari komponen **PCA, K-means, Scatter Plot**
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component.PNG)
+
 
 
 ## Deployment
