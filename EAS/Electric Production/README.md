@@ -8,7 +8,7 @@
 ## Business Understanding
 Proses yang dilakukan pada dataset yang digunakan adalah :
 - Menganalisis rata-rata produksi listrik pada kurun waktu tertentu (time series), dengan mempertimbangkan:
-   - **Total Usage**: Keseluruhan Produksi Listrik dalam satuan waktu Bulan (Dikarenakan semua data unik dan tidak memiliki ID). Terdapat variable hari namun hanya 1 variasi
+   - **Total Usage**: Keseluruhan Produksi Listrik dalam satuan waktu Bulan (Dikarenakan semua data unik dan tidak memiliki ID). Terdapat variable hari namun hanya 1 variasi.
    - **Usage by Year**: Produksi Listrik per Tahun dalam satuan waktu Bulan.
  
 ## Data Understanding
@@ -35,7 +35,7 @@ pastikan membuka file dataset (.csv) yang terlampir
 - Setelah itu menambahkan metanode **Load Data** yang berisikan node-node sebagai berikut<br>
 ![](Dokumentasi/data-preparation/loaddata-metanode.PNG)
 
-- Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "meter"<br>
+- Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "prosuction"<br>
 ![](Dokumentasi/data-preparation/loaddata-creator.PNG)
 
 - Untuk konfigurasi node **DB Loader** adalah seperti berikut<br>
@@ -60,7 +60,7 @@ pastikan membuka file dataset (.csv) yang terlampir
 ![](Dokumentasi/extract-date-time-attributes/edta-metanode.PNG)
 
 - Untuk node **Spark SQL Query** pertama yaitu untuk mengkonversikan datetime dari string DATE<br>
-![](Dokumentasi/extract-date-time-attributes/edta-convert.PNG)
+![](Dokumentasi/extract-date-time-attributes/revisi-convert.PNG)
 
 - Berikut SQL Query yang ada pada node tersebut
 ```
@@ -97,7 +97,7 @@ FROM #table# t1
 ![](Dokumentasi/aggregation-and-time-series/aats-metanode.PNG)
 
 - Metanode ini adalah untuk membuat time-series berdasarkan 2 kategori pada **Business Understanding** yaitu:
-   - **Total Usage**: Keseluruhan Produksi Listrik dalam satuan waktu Bulan (Dikarenakan semua data unik dan tidak memiliki ID). Terdapat variable hari namun hanya 1 variasi
+   - **Total Usage**: Keseluruhan Produksi Listrik dalam satuan waktu Bulan (Dikarenakan semua data unik dan tidak memiliki ID). Terdapat variable hari namun hanya 1 variasi.
    - **Usage by Year**: Produksi Listrik per Tahun dalam satuan waktu Bulan.
    
 - Gambaran prosesnya adalah:
@@ -196,7 +196,7 @@ FROM #table# t1
 - Beginilah hasil dari plotting menggunakan **Scatter Plot**<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-plot-result.PNG)
 
-- Setelah itu membuat node **Table View**<br>
+- Setelah itu membuat node **Table View** untuk membuat Aggregated Production Data<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-view.PNG)
 
 - Dan beginilah tampilan JavaScript untuk tabel<br>
