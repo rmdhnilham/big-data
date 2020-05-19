@@ -330,9 +330,39 @@ FROM #table#
 - Dan beginilah hasil dari pengelompokan K-means
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-kmeans-result.PNG)
 
-- Setelah itu tambahkan joiner seperti tahap **Agreagations and time series** dengan parameter "meterID"
+- Tambahkan column filter untuk menyimpan cluster
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-columnfilter.PNG)
+
+- Beginilah hasilnya
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-columnfilter-result.PNG)
+
+- Setelah itu tambahkan joiner seperti tahap **Agreagations and time series** dengan parameter "meterID" dan beginilah hasilnya
 ![](Dokumentasi/aggregation-and-time-series/aats-joiner-config.PNG)
 
+- Kemudian tambahkan node **Spark to Table** untuk mengubah data spark menjadi table
+- Setelah itu lakukan denormalisasi, dan beginilah hasilnya
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-denom-result.PNG)
 
+- Lalu tambahkan node **Number to String** untuk keperluan kustomisasi tabel dengan konfigurasi sebagai berikut
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-number-to-string.PNG)
+
+- Beginilah hasil input untuk kustomisasi tabel
+![](https://github.com/rmdhnilham/big-data/blob/master/Tugas7/Dokumentasi/pca-kmeans-scatter-plot/scatter-component-transform%20input.PNG)
+
+- Kemudian tambahkan tahapan untuk membuat tabel
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-custom-table.PNG)
+
+- Berikut konfigurasi dari node **Color Manager**
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-custom-table-color.PNG)
+
+- Berikut konfigurasi dari node **Table View**
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-custom-table-view.PNG)
+
+- Berikut konfigurasi dari node **Scatter Plot**
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-custom-table-plot.PNG)
+
+- Kemudian pada denormalisasi ubahlah menjadi spark kembali menjadi **Table to Spark**
+- Lalu berilah nama menjadi **PCA_dimension_(nomor_dimensi)** menggunakan node **Spark Column Rename**
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-rename.PNG)
 
 ## Deployment
