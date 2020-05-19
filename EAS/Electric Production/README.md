@@ -35,7 +35,7 @@ pastikan membuka file dataset (.csv) yang terlampir
 - Setelah itu menambahkan metanode **Load Data** yang berisikan node-node sebagai berikut<br>
 ![](Dokumentasi/data-preparation/loaddata-metanode.PNG)
 
-- Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "prosuction"<br>
+- Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "production"<br>
 ![](Dokumentasi/data-preparation/loaddata-creator.PNG)
 
 - Untuk konfigurasi node **DB Loader** adalah seperti berikut<br>
