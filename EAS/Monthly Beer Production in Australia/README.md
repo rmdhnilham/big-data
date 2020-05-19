@@ -101,9 +101,9 @@ FROM #table# t1
    - **Usage by Year**: Produksi Beer per Tahun dalam satuan waktu Bulan.
    
 - Gambaran prosesnya adalah:
-   - Pengambilan jumlah produksi beer dengan menggunakan agregasi SUM untuk tiap kategori dengan memakai **month** sebagai parameter GroupBy
-	  - Pada kategori **Usage by Year** diambil rata-rata produksi beer tiap tahun dalam satuan waktu bulan menggunakan agregasi AVG
-	  - Semua hasil agregasi diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
+	- Pengambilan jumlah produksi beer dengan menggunakan agregasi SUM untuk tiap kategori dengan memakai **month** sebagai parameter GroupBy
+	- Pada kategori **Usage by Year** diambil rata-rata produksi beer tiap tahun dalam satuan waktu bulan menggunakan agregasi AVG
+	- Semua hasil agregasi diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
    
 - Sebelum memproses data tambahkan node **Persist Spark DataFream/RDD** dengan konfigurasi sebagai berikut<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-persisi.PNG)
