@@ -27,7 +27,7 @@ Data yang digunakan pada proses kali ini adalah Data Penggunaan Listrik di Irlan
  
 
 ## Data Preparation
-![](Dokumentasi/dataprep.PNG)
+![](Dokumentasi/data-prep.PNG)
 - Pertama-tama membuat spark context local menggunakan node **Create Local Big Data Environment**
 - Lalu membaca dataset Penggunaan Listrik di Irlandia dengan **File Reader**
 
@@ -174,6 +174,9 @@ from #table#
 	- Lalu pada kategori selain **Total Usage** diambil rata-rata penggunaan listrik tiap kategori menggunakan agregasi AVG
 	- Sebagai catatan pada kategori **Usage by Day of Week**, **Usage by Day Segment**, dan **Usage by Day Classifier** perlu dibuatkan pivot untuk mengelompokkan kolom tiap-tiap kluster
 	- Setelah itu semua kategori diganti nama agar mudah untuk dibaca dan digabungkan menggunakan Joiner 
+- Sebelum memproses data tambahkan node **Persist Spark DataFream/RDD** dengan konfigurasi sebagai berikut
+![](Dokumentasi/aggregation-and-time-series/aats-persisi.PNG)
+
 - Berikut ini adalah dokumentasi untuk tiap-tiap kategori:
 #### Total Usage
 ![](Dokumentasi/aggregation-and-time-series/aats-total.PNG)
@@ -271,6 +274,12 @@ from #table#
 - Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avg_Hourly** agar mudah untuk dibaca
 ![](Dokumentasi/aggregation-and-time-series/aats-hour-rename.PNG)
 
+- Setelah tiap kategori selesai diproses makan join kan semuanya menggunakan node **Spark Joiner**
+![](Dokumentasi/aggregation-and-time-series/aats-joiner.PNG)
+
+- Berikut konfigurasi node **Spark Joiner** menggunakan parameter "meterID"
+![](Dokumentasi/aggregation-and-time-series/aats-joiner-config.PNG)
+
 
 ## Evaluation
 ![](Dokumentasi/eval.PNG)
@@ -305,6 +314,24 @@ FROM #table#
 - Setelah itu menambahkan komponen **PCA, K-means, Scatter Plot** untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
 - Berikut isi dari komponen **PCA, K-means, Scatter Plot**
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component.PNG)
+
+- Pertama-tama melakukan normalisasi menggunakan node **Spark Normalizer** 
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-spark-norm.PNG)
+
+- Kemundian melakukan PCA pada 96% data yang digunakan
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-PCA-config.PNG)
+
+- Beginilah hasil dari PCA
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-PCA-result.PNG)
+
+- Lalu untuk pengelompokan cluster mengunakan algoritma K-means
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-kmeans-config.PNG)
+
+- Dan beginilah hasil dari pengelompokan K-means
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-kmeans-result.PNG)
+
+- Setelah itu tambahkan joiner seperti tahap **Agreagations and time series** dengan parameter "meterID"
+![](Dokumentasi/aggregation-and-time-series/aats-joiner-config.PNG)
 
 
 
