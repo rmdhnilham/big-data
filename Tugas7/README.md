@@ -336,7 +336,7 @@ FROM #table#
 - Beginilah hasilnya
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-columnfilter-result.PNG)
 
-- Setelah itu tambahkan joiner seperti tahap **Agreagations and time series** dengan parameter "meterID" dan beginilah hasilnya
+- Setelah itu tambahkan joiner seperti tahap **Agreagations and time series** dengan parameter "meterID" dan beginilah hasilnya<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-joiner-config.PNG)
 
 - Kemudian tambahkan node **Spark to Table** untuk mengubah data spark menjadi table
@@ -349,7 +349,7 @@ FROM #table#
 - Beginilah hasil input untuk kustomisasi tabel
 ![](https://github.com/rmdhnilham/big-data/blob/master/Tugas7/Dokumentasi/pca-kmeans-scatter-plot/scatter-component-transform%20input.PNG)
 
-- Kemudian tambahkan tahapan untuk membuat tabel
+- Kemudian tambahkan tahapan untuk membuat tabel<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component-custom-table.PNG)
 
 - Berikut konfigurasi dari node **Color Manager**
@@ -371,7 +371,7 @@ FROM #table#
 - Berikut konfigurasi pada node **Spark to Hive**
 ![](Dokumentasi/deployment/deployment-hive-config.PNG)
 
-- Dan berikut hasil dari deployment
+- Dan berikut hasil dari deployment<br>
 ![](Dokumentasi/deployment/deployment-hive-result.PNG)
 
 - Untuk opsional dapat dilihat pada Hive menggunakan DBeaver
@@ -380,7 +380,7 @@ FROM #table#
 - Berikut konfigurasi pada node **Spark to Parquet**
 ![](Dokumentasi/deployment/deployment-parquet-config.PNG)
 
-- Dan berikut hasil deploymentnya
+- Dan berikut hasil deploymentnya<br>
 ![](Dokumentasi/deployment/deployment-parquet-result.PNG)
 
 ## Keseluruhan workflow KNIME
