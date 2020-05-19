@@ -184,7 +184,7 @@ from #table#
 ![](Dokumentasi/aggregation-and-time-series/aats-total-groupby.PNG)
 
 - Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **totalKW** agar mudah untuk dibaca
-![](Dokumentasi/aggregation-and-time-series/aggregation-and-time-series/fix.PNG)
+![](Dokumentasi/aggregation-and-time-series/fix.PNG)
 
 #### Usage by Year
 ![](Dokumentasi/aggregation-and-time-series/aats-year.PNG)
