@@ -147,7 +147,7 @@ FROM #table# t1
 
 - Pada tahap Evaluasi menggunakan komponen-komponen seperti **PCA, K-means, Scatter Plot** untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
 - Berikut isi dari komponen **PCA, K-means, Scatter Plot**<br>
-![](Dokumentasi/pca-kmeans-scatter-plot/pca-metanode.PNG)
+![](Dokumentasi/pca-kmeans-scatter-plot/pca-mertanode.PNG)
 
 - Pertama-tama melakukan normalisasi menggunakan node **Spark Normalizer**<br>
 ![](Dokumentasi/pca-kmeans-scatter-plot/pca-normalizer.PNG)
