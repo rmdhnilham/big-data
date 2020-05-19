@@ -27,7 +27,7 @@ Data yang digunakan pada proses kali ini adalah Data Penggunaan Listrik di Irlan
  
 
 ## Data Preparation
-![](Dokumentasi/data-preparation/dataprep.PNG)
+![](Dokumentasi/dataprep.PNG)
 - Pertama-tama membuat spark context local menggunakan node **Create Local Big Data Environment**
 - Lalu membaca dataset Penggunaan Listrik di Irlandia dengan **File Reader**
 
@@ -37,10 +37,7 @@ Data yang digunakan pada proses kali ini adalah Data Penggunaan Listrik di Irlan
 - Dan berikut untuk konfigurasi node **File Reader**
 ![](Dokumentasi/data-preparation/filereader-config.PNG)
 
-
-## Modelling
-![](Dokumentasi/modelling/modelling.PNG)
-- Pertama dengan menambahkan metanode **Load Data** yang berisikan node-node sebagai berikut
+- Setelah itu menambahkan metanode **Load Data** yang berisikan node-node sebagai berikut
 ![](Dokumentasi/modelling/loaddata-metanode.PNG)
 
 - Pada node **DB Table Creator**, masukkan konfigurasi seperti berikut, dimana menamai tabel sebagai "meter"
@@ -62,18 +59,16 @@ jdbc:hive2://localhost:56063/
 - Kemudian lakukan query untuk melihat data pada tabel meter yang sudah dibuat diatas
 ![](Dokumentasi/modelling/loaddata-hive.PNG)
 
+
+## Modelling
+![](Dokumentasi/model.PNG)
 - Setelah Data berhasil di load, kemundian ubah menjadi data Spark dengan node **Hive to Spark** dengan konfigurasi sebagai berikut<br>
 ![](Dokumentasi/modelling/hivetospark.PNG)
 
-
-## Evaluation
-![](Dokumentasi/extract-date-time-attributes/evaluation.PNG)
-- Dalam proses evaluasi ini terbagi menjadi 2 metanode, 1 node, dan 1 komponen. Antara lain:
-1. Metanode **Extract date-time attributes**: untuk mendapatkan waktu agar dapat di proses untuk selanjutnya
-2. Metanode **Agreagations and time series**: agregasi penggunaan listrik pada 9 kategori pada **Bussiness Understanding**
-3. Node **Spark SQL Query**: query untuk menghitung persentase dari penggunaan listrik secara per hari, dan pada hari saat periode jam tertentu
-4. Komponen **PCA, K-means, Scatter Plot**: untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
-
+- Pada model ini terdapat 2 metanode yaitu:
+	1. **Extract date-time attributes**: untuk mendapatkan waktu agar dapat di proses untuk selanjutnya
+	2. **Agreagations and time series**: agregasi penggunaan listrik pada 9 kategori pada **Bussiness Understanding**
+	
 ### 1. Extract date-time attributes
 - Untuk metanode Extract date-time attributes bersikan oleh 4 node **Spark SQL Query** sebagai berikut
 ![](Dokumentasi/extract-date-time-attributes/edta-metanode.PNG)
@@ -277,8 +272,10 @@ from #table#
 ![](Dokumentasi/aggregation-and-time-series/aats-hour-rename.PNG)
 
 
-### 3. Spark SQL Query
-- Pada node ini diproses query untuk membuat dan menambahkan kolom reta-rata penggunaan pada hari di tiap minggu tertentu dan juga periode jam pada hari tertentu
+## Evaluation
+![](Dokumentasi/eval.PNG)
+- Menambahkan node **Spark SQL Query**
+- Pada node ini diproses query untuk membuat dan menambahkan kolom reta-rata berisi pesentase penggunaan pada hari di tiap minggu tertentu dan juga periode jam pada hari tertentu
 ![](Dokumentasi/aggregation-and-time-series/after-aats.PNG)
 
 - Berikut SQL Query yang ada pada node tersebut
@@ -305,8 +302,9 @@ FROM #table#
 - Berikut hasil dari keseluruhan kolom yang siap untuk di plootting pada tabel
 ![](Dokumentasi/aggregation-and-time-series/after-aats-result.PNG)
 
-
-### 4. PCA, K-means, Scatter Plot
+- Setelah itu menambahkan komponen **PCA, K-means, Scatter Plot** untuk menganalisis menggunakan PCA dan K-means kemudian di plot pada tabel menggunakan Scatter Plot
+- Berikut isi dari komponen **PCA, K-means, Scatter Plot**
+![](Dokumentasi/pca-kmeans-scatter-plot/scatter-component.PNG)
 
 
 ## Deployment
