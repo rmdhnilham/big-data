@@ -9,11 +9,11 @@ Pada tugas EAS kali ini adalah tugas yang seirama dengan [Tugas7](https://github
 
 # List Dataset
 
-- Daily Minimum Temperatures in Mexico
+- Daily Minimum Temperatures in Mexico<br>
 [Dokumentasi](https://github.com/rmdhnilham/big-data/tree/master/EAS/Daily%20Minimum%20Temperatures%20in%20Mexico)
-- Electric Production
+- Electric Production<br>
 [Dokumentasi](https://github.com/rmdhnilham/big-data/tree/master/EAS/Electric%20Production)
-- Monthly Beer Production in Australia
+- Monthly Beer Production in Australia<br>
 [Dokumentasi](https://github.com/rmdhnilham/big-data/tree/master/EAS/Monthly%20Beer%20Production%20in%20Australia)
-- Sales of Shampoo Over a Three Year Period
+- Sales of Shampoo Over a Three Year Period<br>
 [Dokumentasi](https://github.com/rmdhnilham/big-data/tree/master/EAS/Sales%20of%20Shampoo%20Over%20a%20Three%20Year%20Period)
