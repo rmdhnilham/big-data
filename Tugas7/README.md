@@ -368,10 +368,10 @@ FROM #table#
 ## Deployment
 ![](Dokumentasi/deploy.PNG)
 - Pada proses deployment di workflow ini terdapat 2 deployment yaitu menggunakan node **Spark to Hive** dan **Spark to Parquet**
-- Berikut konfigurasi pada node **Spark to Hive**
+- Berikut konfigurasi pada node **Spark to Hive**<br>
 ![](Dokumentasi/deployment/deployment-hive-config.PNG)
 
-- Dan berikut hasil dari deployment<br>
+- Dan berikut hasil dari deployment
 ![](Dokumentasi/deployment/deployment-hive-result.PNG)
 
 - Untuk opsional dapat dilihat pada Hive menggunakan DBeaver
