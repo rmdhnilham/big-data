@@ -127,13 +127,13 @@ FROM #table# t1
 ![](Dokumentasi/aggregation-and-time-series/aats-year-groupby.PNG)
 
 - Berikut adalah hasil dari agregasi tersebut<br>
-![](Dokumentasi/aggregation-and-time-series/aats-total-groupby-result.PNG)
+![](Dokumentasi/aggregation-and-time-series/aats-year-groupby-result.PNG)
 
 - Konfigurasi node **Spark GroupBy** untuk pengambilan rata-rata penjualan shampoo tiap tahun dalam satuan waktu bulan menggunakan agregasi AVG<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-year-groupby-1.PNG)
 
 - Berikut adalah hasil dari agregasi tersebut<br>
-![](Dokumentasi/aggregation-and-time-series/aats-total-groupby-1-result.PNG)
+![](Dokumentasi/aggregation-and-time-series/aats-year-groupby-1-result.PNG)
 
 - Konfigurasi node **Spark Column Rename** untuk penggantian nama kolom menjadi **avgYearlyKW** agar mudah untuk dibaca<br>
 ![](Dokumentasi/aggregation-and-time-series/aats-year-rename.PNG)
